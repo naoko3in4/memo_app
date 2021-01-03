@@ -1,0 +1,1 @@
+<div>{{!! $memos[0]->content !!}}</div>
