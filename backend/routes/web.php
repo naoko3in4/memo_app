@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/content', [MemoController::class, 'showContent']);
+
+Route::post('/content', [MemoController::class, 'store']);
