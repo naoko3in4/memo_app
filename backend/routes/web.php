@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MemoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['name' => 'Naoko']);
 });
+
+Route::get('/content', [MemoController::class, 'showContent']);
+
+Route::post('/content', [MemoController::class, 'store']);
