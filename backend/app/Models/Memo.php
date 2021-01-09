@@ -14,6 +14,6 @@ class Memo extends Model
 
     // カラムの指定
     protected $fillable = [
-        'id', 'content'
+        'content'
     ];
 }

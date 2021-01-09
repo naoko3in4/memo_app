@@ -16,6 +16,8 @@ class MemoController extends Controller
   public function store(Request $request)
   {
     $content = $request->input('content');
-    dd($content);
+
+    Memo::create(['content' => $content]);
+    return redirect()->back()->with('success_message', 'SUCCESS!!');
   }
 }
